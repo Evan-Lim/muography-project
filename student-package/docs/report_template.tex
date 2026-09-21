@@ -1,0 +1,103 @@
+% ---------------------------------------------------------------------------
+%  Report template
+%  "Seeing Through Solid Rock" -- MYSSP Project P-1
+%
+%  Compile with pdflatex (twice, so that references resolve).
+%  Target length: 6-8 pages including figures. Shorter and sharper beats
+%  longer and padded -- the Khufu discovery paper itself is 5 pages.
+% ---------------------------------------------------------------------------
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{siunitx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+
+\title{Detecting a Hidden Chamber with Cosmic-Ray Muons:\\
+       A Simulation Study}
+\author{Your Name \\ \small MYSSP Project P-1 \\
+        \small Mentor: Assoc.\ Prof.\ Dr.\ Khaw Kim Siang, Tsung-Dao Lee Institute, SJTU}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+% Four sentences, written LAST.
+% 1. What problem. 2. What you did. 3. What number you got. 4. What it means.
+% Example shape:
+% "Muography images dense objects by counting cosmic-ray muons that pass
+%  through them. We simulated ... We find that a detector of area X requires
+%  Y days for the expected signal from a Z-metre-radius chamber to reach 5 sigma under the project model. State the chamber radius explicitly."
+\end{abstract}
+
+\section{Introduction}
+% Why can muons see through rock, and why is that useful?
+% One paragraph of physics, one paragraph of applications, one sentence
+% stating the question this report answers. Cite Khufu here.
+
+\section{Method}
+
+\subsection{Muon flux and energy loss}
+% The Gaisser parametrisation and the a+bE energy-loss model.
+% State the formulae, define every symbol, give the units.
+\begin{equation}
+    E_{\min}(X) = \frac{a}{b}\left( e^{bX} - 1 \right)
+\end{equation}
+% ... and explain what a, b and X are.
+
+\subsection{Target geometry and ray tracing}
+% Describe the pyramid, the void, the detector position.
+% Include your density-slice figure here -- it does more than a paragraph.
+
+\subsection{Counting statistics}
+% How expected counts are computed. Define expected significance and observed significance, and explain why the headline exposure time uses the expected-significance curve.
+
+\section{Validation}
+% This section is what separates a report from a description.
+% What did you check, and against what? Step-size convergence, the
+% no-void control, hand calculations. Say what agreed and to what precision.
+
+\section{Results}
+
+\subsection{Opacity and count maps}
+\begin{figure}[htbp]
+    \centering
+    % \includegraphics[width=0.9\textwidth]{figures/your_figure.pdf}
+    \caption{Write captions that can be understood on their own, without the
+             main text. A reader who looks only at your figures should still
+             learn your result.}
+    \label{fig:maps}
+\end{figure}
+
+\subsection{Exposure time required}
+% THE headline result. Report the first crossing of 5 sigma on the expected-significance curve. Explain the interpolation/selection method you used; do not invent an uncertainty on the exposure time unless your mentor gives you a defined method.
+
+\subsection{Parameter studies}
+% Your two chosen studies. Prediction first, then result, then explanation.
+
+\section{Discussion}
+% What limits the measurement? What did the simulation leave out
+% (scattering, backgrounds, detector efficiency, uncertainty in rock density)?
+% Which of those would matter most in a real campaign, and why?
+% Be specific and be honest. This section is read most carefully.
+
+\section{Conclusion}
+% Three sentences. No new information.
+
+\section*{Code availability}
+% Point to your repository. Say which notebook produces which figure.
+
+\begin{thebibliography}{9}
+\bibitem{khufu} K.~Morishima \textit{et al.},
+  ``Discovery of a big void in Khufu's Pyramid by observation of cosmic-ray
+  muons,'' \textit{Nature} \textbf{552}, 386--390 (2017).
+\bibitem{bonomi} G.~Bonomi \textit{et al.},
+  ``Applications of cosmic-ray muons,''
+  \textit{Prog.\ Part.\ Nucl.\ Phys.} \textbf{112}, 103768 (2020).
+\bibitem{pdg} Particle Data Group, ``Cosmic Rays,''
+  \textit{Review of Particle Physics}.
+\end{thebibliography}
+
+\end{document}

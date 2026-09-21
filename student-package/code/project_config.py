@@ -1,0 +1,13 @@
+"""Single source of truth for the baseline student simulation parameters."""
+
+DETECTOR_AREA_M2 = 0.25
+DETECTOR_POSITION_M = (0.0, -40.0, 3.0)
+PYRAMID_BASE_M = 230.0
+PYRAMID_HEIGHT_M = 139.0
+ROCK_DENSITY_G_CM3 = 2.5
+VOID_CENTRE_M = (0.0, 0.0, 70.0)
+VOID_RADIUS_M = 10.0
+FIELD_DEG = 40.0
+STEP_DEG = 2.0
+RAY_STEP_M = 0.25
+REFERENCE_SEED = 0
