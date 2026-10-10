@@ -27,7 +27,7 @@ In the lower, denser regions of the atmosphere, high-energy mesons often collide
 
 **What went wrong / what I don't understand**
 
-The surviving flux against limestone thickness graph I had initially plotted had each angle plotted on a separate curve instead of integrated into one curve. I could not find how to integrate it into once curve.
+I didn't know if there should have been one curve of multiple curves for the graph of limestone thickness againt suviving flux
 
 *(The most important section. Be specific: which cell, which number, what you
 expected versus what you got. "It doesn't work" cannot be helped; "the opacity
@@ -37,7 +37,6 @@ comes out negative when ay is above 30 degrees" can be helped in two minutes.)*
  
 Read through the papers provided.
 Plot the opacity for the target.
-
 
 
 **Hours spent: 2** ___
