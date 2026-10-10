@@ -2,30 +2,27 @@
 
 ---
 
-## Week 3 — 5/10/2026-12/10/2026
+## Week 3 — 5/10/2026-11/10/2026
 
 **What I did**
 
+I fixed the surviving flux against limestone graph to have only one curve of angle 0 degree instead of 4 from different angles.
+I finished the vertical slice of the pyramid colourbar and the graph of the chamber notch.
 
-
-*(A few sentences. What you actually worked on, not what you meant to.)*
 
 **What I found**
 
+![week03: vertical cross-section of pyramid](image-1.png)
 
-
-*(Attach or reference your plot of the week. Every week should have one figure,
-even a bad one. A week with no figure is a warning sign.)*
+![week03: chamber notch](image-2.png)
 
 **What went wrong / what I don't understand**
 
-
-*(The most important section. Be specific: which cell, which number, what you
-expected versus what you got. "It doesn't work" cannot be helped; "the opacity
-comes out negative when ay is above 30 degrees" can be helped in two minutes.)*
+I plotted the vertical slice with x as 230/2 which resulted in a rectangular plot, not realising that it would not be the centre of the pyramid. I had to change x to 0 as the origin was the centre of the pyramid.
 
 **Next week I plan to**
 
-*(Two or three concrete items.)*
+Code the opacity map.
+Look through my past graphs for mistakes.
 
-**Hours spent:** ___
+**Hours spent: 2** ___
