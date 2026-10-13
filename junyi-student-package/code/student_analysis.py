@@ -16,13 +16,24 @@ from project_config import (
 
 def opacity_map(target, detector, field_deg=FIELD_DEG, step_deg=STEP_DEG,
                 ray_step=RAY_STEP_M):
-    """Return opacity map and angular grids for the chosen viewing field.
 
-    TODO (Notebook 02): build ax/ay grids, trace one ray per direction, and
-    return ``opacity, ax_deg, ay_deg`` where the angle grids are in degrees.
-    """
-    raise NotImplementedError("Implement opacity_map in notebook 02.")
+    ax_values = np.arange(-field_deg,field_deg +step_deg, step_deg)
+    ay_values = np.arange(-field_deg, field_deg + step_deg,step_deg)
 
+    ax_deg, ay_deg = np.meshgrid(ax_values, ay_values)
+
+    opacity = np.zeros_like(ax_deg, dtype=float)
+
+    for i in range(ay_deg.shape[0]):
+        for j in range(ax_deg.shape[1]):
+
+            ax = np.radians(ax_deg[i, j])
+            ay = np.radians(ay_deg[i, j])
+
+            d = mg.direction_from_angles(ax, ay)
+            X = mg.trace_one_ray(target,detector,d,step=ray_step)
+            opacity[i, j] = X
+    return opacity, ax_deg, ay_deg
 
 def expected_counts(target, detector, days, area=DETECTOR_AREA_M2,
                     field_deg=FIELD_DEG, step_deg=STEP_DEG,
