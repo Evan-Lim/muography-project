@@ -55,7 +55,7 @@ def expected_counts(target, detector, days, area=DETECTOR_AREA_M2,
     angle and exposure time, and return counts plus angle grids.
     """
 
-    op, ax_deg, ay_deg = opacity_map (target, detector, field_deg=field_deg, step_deg=step_deg, ray_step = ray_step)
+    op, ax_deg, ay_deg = opacity_map (target, detector, field_deg, step_deg, ray_step)
    
     ax_rad = np.radians (ax_deg)
     ay_rad = np.radians (ay_deg)
