@@ -28,7 +28,7 @@ I was also confused with how to use the field degree parameter.
 **Next week I plan to**
 
 Start working on notebook 3.
-I will implement the expected count function is student_analysis.py.
+I will implement the expected count function in student_analysis.py.
 I will produce the 30 day expected muon count map for the targets with and without the void.
 
 **Hours spent: 5** ___
