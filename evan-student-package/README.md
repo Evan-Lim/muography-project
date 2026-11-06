@@ -103,3 +103,51 @@ spent stuck on one bug *in silence* is the only real way this project can fail.
 
 *Questions between meetings are welcome and expected. "I have been stuck for two
 hours" is the right moment to ask, not the wrong one.*
+
+---
+
+## Final deliverables (Evan)
+
+The completed project contains:
+
+- **`EXPLAINER.md`** — a plain-language explanation of the whole project, from
+  cosmic rays to the 13.4-day headline and its limitations, plus the official
+  MYSSP 2026 submission map.
+- **`docs/final_report.tex` + `docs/final_report.pdf`** — the scientific report
+  in the official MYSSP 2026 `myssp` template. The body is **10 pages** (the
+  MYSSP maximum); references and appendix are additional. Compile from `docs/`
+  with:
+
+  ```bash
+  pdflatex final_report
+  bibtex final_report
+  pdflatex final_report
+  pdflatex final_report
+  ```
+
+  `docs/myssp.sty` is a local fallback for offline compilation; use the official
+  style file on Overleaf if supplied. References are in
+  `docs/references.bib`.
+- **`docs/slides_and_script.tex` + `docs/slides_and_script.pdf`** — the
+  production document for the **12-page** demo-day deck (1 title + 10 content
+  slides + 1 thank-you/references slide), with large Python figures, custom
+  TikZ diagrams, and the complete 15-minute spoken script. Compile with
+  `pdflatex slides_and_script` (twice, from `docs/`).
+- **`docs/video_script.md`** — the 2.5-minute MYSSP summary-video script and
+  shot list, with all three team members contributing.
+- **`docs/qna_prep.md`** — sixteen rehearsed Q&A answers covering method,
+  confidence, limitations, next steps, and team contributions.
+- **`figures/results_summary.json`** — every number used in the report, slides,
+  and video.
+- **`logs/log01.md` … `logs/log08.md`** — the weekly research record.
+
+The headline result is:
+
+> For the baseline 0.25 m² detector and a 10 m radius chamber, the expected
+> chamber signal reaches 5σ after approximately **13.4 days** under the
+> project's simplified model (3σ at 4.8 days).
+
+The notebooks are ordered and independent: `02` traces the target, `03` makes
+the first image, `04` adds noise and finds the exposure curve, and `05` runs all
+four named studies plus the Malaysian extension and three extra systematics.
+

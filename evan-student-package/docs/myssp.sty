@@ -1,0 +1,61 @@
+% ---------------------------------------------------------------------------
+%  myssp.sty  --  minimal local implementation of the MYSSP 2026 style
+%
+%  The official MYSSP style file is distributed with the Overleaf template.
+%  This local copy exists so the report in this repository compiles offline.
+%  It reproduces the visible requirements described in the template:
+%    * a programme header on every page after the first;
+%    * booktabs-style tables and a tidy caption style;
+%    * the \And / \AND author separators and the `ack` environment.
+% ---------------------------------------------------------------------------
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myssp}[2026/01/01 MYSSP 2026 local style]
+
+\DeclareOption{nonanonymous}{}
+\ProcessOptions\relax
+
+\RequirePackage[margin=2.5cm]{geometry}
+\RequirePackage{fancyhdr}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{caption}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+\RequirePackage{hyperref}
+\RequirePackage{titlesec}
+
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\setlist[itemize]{topsep=2pt,itemsep=1pt,parsep=0pt}
+\setlist[enumerate]{topsep=2pt,itemsep=1pt,parsep=0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{MYSSP 2026}}
+\fancyhead[R]{\small Seeing Through Solid Rock}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\section}{0pt}{1.1ex plus 0.3ex}{0.6ex}
+\titlespacing*{\subsection}{0pt}{0.9ex plus 0.2ex}{0.4ex}
+
+\newenvironment{ack}{\section*{Acknowledgements}\small}{\par}
+
+% Author separators used by the official template.
+\renewcommand{\And}{\end{tabular}\hfill\begin{tabular}[t]{c}}
+\def\AND{\end{tabular}\par\vspace{0.8em}\begin{tabular}[t]{c}}
+\renewcommand{\author}[1]{\gdef\@author{#1}}
+
+\endinput
