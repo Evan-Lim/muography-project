@@ -125,9 +125,8 @@ The completed project contains:
   pdflatex final_report
   ```
 
-  `docs/myssp.sty` is a local fallback for offline compilation; use the official
-  style file on Overleaf if supplied. References are in
-  `docs/references.bib`.
+  `docs/myssp.sty` is the official MYSSP 2026 style file supplied with the
+  template. References are in `docs/references.bib`.
 - **`docs/slides_and_script.tex` + `docs/slides_and_script.pdf`** — the
   production document for the **12-page** demo-day deck (1 title + 10 content
   slides + 1 thank-you/references slide), with large Python figures, custom

@@ -6,8 +6,8 @@
 ## What I did
 
 Wrote `docs/final_report.tex` using the official MYSSP 2026 `myssp` template
-(with a local `docs/myssp.sty` fallback for offline compilation) and
-`docs/references.bib`; compiled it with `pdflatex`/`bibtex`/`pdflatex`.
+and the official `docs/myssp.sty` style file, with `docs/references.bib`;
+compiled it with `pdflatex`/`bibtex`/`pdflatex`.
 Restructured the paper to the MYSSP-required sections: Abstract, Introduction,
 Methodology, Data Collection, Analysis, Results, Discussion and Conclusion,
 with acknowledgements, references and an appendix. Wrote `EXPLAINER.md` for a
@@ -41,9 +41,8 @@ exception, and confirmed every figure in the report exists in `figures/`. Added
 - The `FigureCanvasAgg is non-interactive` warning appears when notebooks are
   executed headlessly. It is harmless; the notebooks suppress it so the saved
   outputs are clean.
-- The official `myssp.sty` was not in the resources folder, so the repository
-  uses a local fallback that reproduces the programme header and table style.
-  On Overleaf, the official style file should replace it.
+- The official `myssp.sty` was supplied separately and is now included as
+  `docs/myssp.sty`; it replaces the temporary fallback used during drafting.
 
 ## Final checklist
 

@@ -407,7 +407,7 @@ The project has been revised against the official MYSSP 2026 paper, presentation
 and judging documents.
 
 **Research paper.** `docs/final_report.tex` now uses the official `myssp`
-template (`docs/myssp.sty` is a local fallback for offline compilation). It has
+template and the official `docs/myssp.sty` style file. It has
 the required sections — Abstract, Introduction, Methodology, Data Collection,
 Analysis, Results, Discussion and Conclusion — plus acknowledgements,
 references and an appendix. The abstract is 150–250 words, every figure and

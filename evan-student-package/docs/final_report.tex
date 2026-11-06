@@ -30,20 +30,21 @@
        A Reproducible Simulation of Muon Radiography for a Hidden Chamber}
 
 \author{%
-  \begin{tabular}{c}
   Evan Lim Hong Yan \\
   MYSSP 2026 Participant \\
-  Malaysia \\[0.7em]
+  Malaysia
+  \And
   Junyi Chai \\
   MYSSP 2026 Participant \\
-  Malaysia \\[0.7em]
+  Malaysia
+  \And
   Samantha Chan Teng Wei \\
   MYSSP 2026 Participant \\
-  Malaysia \\[1.0em]
+  Malaysia
+  \AND
   Mentor: Assoc.\ Prof.\ Dr.\ Khaw Kim Siang \\
   Muon Physics Group, Tsung-Dao Lee Institute \\
   Shanghai Jiao Tong University, China
-  \end{tabular}
 }
 % -----------------------------------------
 
@@ -142,6 +143,7 @@ realistic target shape. A simulation also allows the same geometry to be run
 with and without the chamber, which is the reference needed to divide out the
 pyramid's shape.
 
+\begin{sloppypar}
 The implementation uses Python 3.11, NumPy 2.x \cite{harris2020numpy},
 Matplotlib 3.11 \cite{hunter2007matplotlib}, and Jupyter
 \cite{kluyver2016jupyter}. The supplied physics is in
@@ -149,6 +151,7 @@ Matplotlib 3.11 \cite{hunter2007matplotlib}, and Jupyter
 \texttt{code/student\_analysis.py}; all baseline values live in
 \texttt{code/project\_config.py}. The reference random seed is 0. The notebooks
 and a summary JSON file are listed in Appendix~\ref{app:code}.
+\end{sloppypar}
 
 \subsection{Target geometry and detector}
 
@@ -402,7 +405,7 @@ that the difference map isolates the chamber rather than a geometry bug.
 a control target, or a statistical expectation.}
 \label{tab:validation}
 \small
-\begin{tabular}{@{}p{4.5cm}p{3.1cm}p{3.4cm}p{2.6cm}@{}}
+\begin{tabular}{@{}p{4.2cm}p{2.8cm}p{3.2cm}p{2.3cm}@{}}
 \toprule
 Check & Code result & Reference & Agreement \\
 \midrule
