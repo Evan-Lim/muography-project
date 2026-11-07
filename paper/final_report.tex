@@ -1,16 +1,3 @@
-% =============================================================================
-%  MYSSP 2026 RESEARCH PAPER -- final report
-%  "Seeing Through Solid Rock"
-%
-%  Compile from this directory with:
-%      pdflatex final_report
-%      bibtex   final_report
-%      pdflatex final_report
-%      pdflatex final_report
-%
-%  The local myssp.sty reproduces the programme header and table style.
-%  On Overleaf, replace it with the official MYSSP 2026 myssp.sty if supplied.
-% =============================================================================
 \documentclass{article}
 \usepackage[nonanonymous]{myssp}
 \usepackage{hyperref}
@@ -27,20 +14,20 @@
 
 % -------- SETUP --------
 \title{Seeing Through Solid Rock:\\
-       A Reproducible Simulation of Muon Radiography for a Hidden Chamber}
+       Finding a Hidden Chamber with Cosmic-Ray Muons}
 
 \author{%
   Evan Lim Hong Yan \\
-  MYSSP 2026 Participant \\
-  Malaysia
+  University of Malaya \\
+  Kuala Lumpur, Malaysia
   \And
   Junyi Chai \\
-  MYSSP 2026 Participant \\
-  Malaysia
+  EDUCATIONAL INSTITUTION \\
+  Kuala Lumpur, Malaysia
   \And
   Samantha Chan Teng Wei \\
-  MYSSP 2026 Participant \\
-  Malaysia
+  EDUCATIONAL INSTITUTION \\
+  Kuala Lumpur, Malaysia
   \AND
   Mentor: Assoc.\ Prof.\ Dr.\ Khaw Kim Siang \\
   Muon Physics Group, Tsung-Dao Lee Institute \\
@@ -58,16 +45,15 @@ that survive passage through it. We built a reproducible Python simulation of a
 230~m square-based limestone pyramid containing a 10~m radius spherical
 chamber, observed by a 0.25~m$^2$ detector with a $\pm40^\circ$ field of view
 and $2^\circ$ angular pixels. The simulation combines a measured cosmic-ray
-muon spectrum, exact range--energy energy loss, ray-marched opacity, expected
+muon spectrum, exact range-energy energy loss, ray-marched opacity, expected
 counts, Poisson noise, and two distinct significance definitions. For the
 baseline model the expected signal in a fixed direction reaches three standard
 deviations ($3\sigma$) after 4.8 days and five standard deviations
-($5\sigma$) after 13.4 days; the 30-day expected significance is
-$7.50\sigma$. This headline is a deterministic benchmark for the stated model,
-not a measurement. Using the exact pixel solid angle lengthens the $5\sigma$
+($5\sigma$) after 13.4 days, thus the 30-day expected significance is
+$7.50\sigma$, representing a deterministic benchmark for the stated model. Using the exact pixel solid angle lengthens the $5\sigma$
 exposure to 15.4 days, a whole-image significance requires about 60 days, and a
 4\% error in the assumed rock density can fake a $5\sigma$ signal at 180 days.
-All four named parameter studies were completed: chamber radius, chamber
+All four named parameter studies were completed, which include chamber radius, chamber
 depth, detector placement, and angular binning. A hypothetical Malaysian
 limestone hill with an 8~m cave would require about 9 days. The work shows how
 geometry, counting statistics, and systematics control the detectability of a
@@ -83,12 +69,12 @@ Poisson statistics, exposure optimisation.
 Every minute, roughly $10^4$ cosmic-ray muons cross every square metre of
 ground at sea level. They are produced when high-energy cosmic rays strike
 nuclei in the upper atmosphere, creating pions that decay into muons. A muon is
-a heavy cousin of the electron: the same charge, about 207 times the mass, and
+a heavy cousin of the electron which has the same charge, about 207 times the mass, and
 a rest lifetime of $2.2~\mu$s. A naive calculation says that a muon travelling
 at nearly the speed of light should decay after about 660~m, so almost none
 should reach the ground from the upper atmosphere. They arrive anyway because
-their lifetime is dilated by the relativistic factor $\gamma$; cosmic-ray muons
-are one of the most direct everyday demonstrations of special relativity.
+their lifetime is dilated by the relativistic factor $\gamma$, thus making cosmic-ray muons
+as one of the most direct everyday demonstrations of special relativity.
 
 The same properties make muons a penetrating probe. In the minimum-ionising
 regime a charged particle loses about 2~MeV per gram per square centimetre, so
@@ -96,7 +82,7 @@ a muon with tens of GeV can cross tens of metres of rock. A muon is heavy
 enough that the radiative loss which stops an electron is suppressed by a
 factor of order $207^2$, and it does not feel the strong force that absorbs
 protons and alpha particles. The result is a natural X-ray machine the size of
-the sky: a detector beside a mountain counts muons from each direction, and a
+the sky, which means that a detector beside a mountain counts muons from each direction, and a
 line of sight with less material transmits more muons than the surrounding
 rock \cite{bonomi2020,pdg2024}.
 
@@ -137,20 +123,20 @@ The study is a computational experiment. A three-dimensional density model is
 ray-traced to obtain the opacity in 1681 viewing directions, the opacity is
 converted to expected muon counts, and the counts are sampled with a Poisson
 distribution. The approach is appropriate because the physical quantity of
-interest---the exposure at which a small density contrast becomes statistically
-significant---is not available analytically for a finite angular grid and a
+interest, which is the exposure at which a small density contrast becomes statistically
+significant, is not available analytically for a finite angular grid and a
 realistic target shape. A simulation also allows the same geometry to be run
 with and without the chamber, which is the reference needed to divide out the
 pyramid's shape.
 
 \begin{sloppypar}
-The implementation uses Python 3.11, NumPy 2.x \cite{harris2020numpy},
-Matplotlib 3.11 \cite{hunter2007matplotlib}, and Jupyter
+The implementation uses Python 3.11.17, NumPy 2.4.6 \cite{harris2020numpy},
+Matplotlib 3.11.2 \cite{hunter2007matplotlib}, and Jupyter 1.1.1
 \cite{kluyver2016jupyter}. The supplied physics is in
-\texttt{code/muography.py}; the student-owned analysis is in
-\texttt{code/student\_analysis.py}; all baseline values live in
-\texttt{code/project\_config.py}. The reference random seed is 0. The notebooks
-and a summary JSON file are listed in Appendix~\ref{app:code}.
+\texttt{code/muography.py}, the analysis is in
+\texttt{code/student\_analysis.py}, and all baseline values are in
+\texttt{code/project\_config.py}. The reference random seed is 0 and the notebooks
+with a summary JSON file are listed in Appendix~\ref{app:code}.
 \end{sloppypar}
 
 \subsection{Target geometry and detector}
@@ -165,7 +151,7 @@ The chamber is a sphere of radius 10~m centred at $(0,0,70)$~m, filled with air
 at $1.2\times10^{-3}$~g\,cm$^{-3}$. The detector is a 0.25~m$^2$ square at
 $(0,-40,3)$~m, with a $\pm40^\circ$ field of view and $2^\circ\times2^\circ$
 pixels, giving $41\times41=1681$ directions. Table~\ref{tab:params} lists the
-baseline parameters. The detector lies inside the 230~m footprint; in the model
+baseline parameters. The detector lies inside the 230~m footprint, and in the model
 this is interpreted as a detector in an accessible niche or passage at the base,
 and the rock between that niche and the outside is not modelled.
 
@@ -203,7 +189,7 @@ For every direction the opacity is
 \end{equation}
 evaluated by marching along the ray in 0.25~m steps and summing
 $\rho\,\Delta\ell$, with $\Delta\ell$ converted from metres to centimetres. The
-camera is a tangent plane: a direction is specified by two pointing angles,
+camera is a tangent plane, as a direction is specified by two pointing angles,
 \begin{equation}
 \mathbf{d}=\frac{(\tan a_x,\tan a_y,1)}
 {\sqrt{1+\tan^2a_x+\tan^2a_y}},
@@ -243,17 +229,17 @@ correction of Guan et al.\ \cite{guan2015}. The project uses the small-angle
 convention $\Omega\approx(\Delta\theta)^2$, with
 $\Delta\theta=2^\circ=3.49\times10^{-2}$~rad. At the signal direction (about
 $30^\circ$ from vertical) this overestimates the exact tangent-plane solid
-angle by about 13\%, and at the edge of the field by about 23\%; the effect is
+angle by about 13\%, and at the edge of the field by about 23\%. The effect is
 treated as a systematic in Section~\ref{sec:results}.
 
-Two maps are always produced: one for the target with the chamber and one for
+Two maps are always produced, with one for the target with the chamber and one for
 the twin target with the chamber filled solid. Their ratio
 \begin{equation}
 R=\frac{\mu_{\rm void}}{\mu_{\rm rock}}
 \label{eq:ratio}
 \end{equation}
-is the reconstructed radiograph. Away from the chamber $R=1$ because the
-pyramid's shape cancels; over the chamber $R>1$ because the missing rock
+is the reconstructed radiograph. Away from the chamber, $R=1$ because the
+pyramid's shape cancels. However, over the chamber, $R>1$ because the missing rock
 transmits extra muons.
 
 \subsection{Statistical model}
@@ -275,14 +261,14 @@ curve. Because both the signal and the background scale linearly with $T$,
 $S_{\rm exp}\propto\sqrt{T}$.
 
 The official headline uses $S_{\rm exp}$ at a single signal pixel chosen once
-from the noiseless maps, at $(a_x,a_y)=(0^\circ,30^\circ)$; the line of sight
+from the noiseless maps, at $(a_x,a_y)=(0^\circ,30^\circ)$. The line of sight
 to the chamber centre is at
 $\tan\theta=40/(70-3)=0.597$, or $\theta=30.8^\circ$. Choosing the brightest
 pixel in each noisy map would select upward fluctuations and bias the result.
 The image has 1681 pixels, so a noise-only image is expected to contain about
 $1681\times1.35\times10^{-3}=2.27$ pixels above $3\sigma$. This look-elsewhere
-effect is quantified in Section~\ref{sec:results}. The $5\sigma$ level is the
-project's predefined benchmark, not a complete discovery criterion.
+effect is quantified in Section~\ref{sec:results}, and the $5\sigma$ level is the
+project's predefined benchmark.
 
 The main methodological limitations are that the model is a two-dimensional
 radiograph rather than a three-dimensional tomographic inversion, that muon
@@ -296,7 +282,7 @@ and are revisited in Section~\ref{sec:discussion}.
 
 \subsection{Source and structure of the data}
 
-The data in this project are synthetic by design: they are generated by the
+The data in this project are synthetic by design, as they are generated by the
 simulation rather than measured with a physical detector. This is appropriate
 for a controlled study of the exposure question, because the true density
 distribution is known exactly and the same geometry can be run with and without
@@ -310,7 +296,7 @@ and 30 days using reference seed 0. (iii) A null ensemble of 500 independent
 30-day observations of the solid pyramid, used to characterise the
 look-elsewhere effect. (iv) An ensemble of 500 observations of the chamber
 target at 7, 14 and 30 days, used to characterise the fluctuation of a real
-measurement around the expected curve. (v) One-parameter scans: chamber radius
+measurement around the expected curve. (v) One-parameter scans, which include chamber radius
 (4--20~m), chamber depth (55--110~m), detector distance and lateral offset,
 angular bin size (1--5$^\circ$), detector area (0.0625--2~m$^2$), and assumed
 rock density (2.3--2.7~g\,cm$^{-3}$). A hypothetical Malaysian limestone hill
@@ -318,7 +304,7 @@ provides an additional target.
 
 Each pixel represents one viewing direction, specified by the two pointing
 angles $a_x$ and $a_y$ in degrees. The primary arrays are
-$41\times41$; the $1^\circ$ binning scan uses $81\times81$. Counts are stored
+$41\times41$, and the $1^\circ$ binning scan uses $81\times81$. Counts are stored
 as floating-point expectations before sampling and as integer Poisson draws
 afterwards. Opacities are in g\,cm$^{-2}$, densities in g\,cm$^{-3}$, angles in
 degrees internally and radians in the flux functions, and exposure times in
@@ -328,7 +314,7 @@ plotted with the angle grids directly.
 \subsection{Preparation and bias controls}
 
 No smoothing, interpolation, outlier removal or missing-value imputation is
-applied: the simulation produces a complete array by construction. The only
+applied, as the simulation produces a complete array by construction. The only
 pre-processing step is the choice of the signal pixel, which is made once from
 the noiseless 1-day expectation maps and then held fixed for every exposure and
 every noise realisation. This avoids the selection bias that would arise from
@@ -343,15 +329,14 @@ perfectly independent, whereas a real detector has finite angular resolution.
 The rock density is assumed to be exactly 2.5~g\,cm$^{-3}$. These assumptions
 are quantified in Section~\ref{sec:results} and discussed in
 Section~\ref{sec:discussion}. The data are representative only of the stated
-model; they are not a sample of a real pyramid.
+model, and they are not a sample of a real pyramid.
 
 \subsection{Data and code availability}
 
 The data are reproducible from the notebooks in the repository. A summary of
 every number used in this paper is written to
 \texttt{figures/results\_summary.json}. The repository contains the simulation
-code, the analysis module, the notebooks, and all figures. The reference seed
-is 0. Appendix~\ref{app:data} lists the data sources and software;
+code, the analysis module, the notebooks, and all figures. Appendix~\ref{app:data} lists the data sources and software, whereas
 Appendix~\ref{app:code} maps figures to notebooks.
 
 
@@ -360,20 +345,20 @@ Appendix~\ref{app:code} maps figures to notebooks.
 
 \subsection{Analytical framework and implementation}
 
-The core analysis chain is: opacity map $\rightarrow$ minimum energy
+The core analysis chain includes the opacity map $\rightarrow$ minimum energy
 $\rightarrow$ expected counts $\rightarrow$ ratio map $\rightarrow$ expected
-significance $\rightarrow$ exposure curve. The two student-owned functions are
+significance $\rightarrow$ exposure curve. The two integral functions are
 \texttt{opacity\_map}, which builds the angular grids and traces one ray per
 pixel, and \texttt{expected\_counts}, which applies
 Eqs.~\eqref{eq:counts}--\eqref{eq:ratio}. A third helper,
-\texttt{counts\_from\_opacity}, reuses a traced geometry for exposure scans;
+\texttt{counts\_from\_opacity}, reuses a traced geometry for exposure scans, and
 because counts are exactly proportional to $T$, this introduces no
-approximation. The functions are imported by notebooks 03--05, so every
+approximation. The functions are imported by notebooks 03-05, so every
 notebook runs from a fresh kernel without relying on variables left in memory.
 
 The expected-significance curve is evaluated at 14 exposures from 1 to 180 days.
 The 5$\sigma$ crossing is obtained by linear interpolation between the two
-bracketing points; the exact square-root scaling gives a second, independent
+bracketing points, and the exact square-root scaling gives a second, independent
 estimate. The four parameter studies change one variable at a time. Studies
 A--C evaluate the signal along the exact detector-to-chamber-centre ray rather
 than at the maximum of a coarse map, which removes a grid-alignment artefact
@@ -383,13 +368,13 @@ fits are used only to describe the scaling of significance and exposure with
 chamber radius.
 
 Uncertainty is handled at two levels. Statistical uncertainty is estimated from
-the 500-member ensembles: the standard deviation of the observed significance
+the 500-member ensembles, and include the standard deviation of the observed significance
 at a fixed pixel, and the distribution of the maximum pixel in the null
 experiment. Systematic uncertainty is estimated by repeating the baseline
 analysis with (i) the exact tangent-plane pixel solid angle, (ii) a range of
 assumed rock densities, (iii) a range of detector areas, and (iv) a per-pixel
 versus whole-image definition of significance. The headline itself has no
-statistical error bar: it is a deterministic property of the expectation maps.
+statistical error bar, as it is a deterministic property of the expectation maps.
 
 \subsection{Validation}
 
@@ -423,11 +408,11 @@ Null maximum (500 runs) & 3.44 mean & look-elsewhere & see text \\
 \end{tabular}
 \end{table}
 
-The hand calculations are reproducible with a calculator. At the chamber the
+At the chamber the
 opacity deficit is $4{,}935$~g\,cm$^{-2}$, against
-$2r\rho\times100=5{,}000$ for a 20~m chord; the 1.3\% difference comes from the
+$2r\rho\times100=5{,}000$ for a 20~m chord, and the 1.3\% difference comes from the
 discrete ray missing the centre by about 1.3~m. The central vertical opacity is
-21,999, against 21,913 from the exact pyramid geometry; the 0.4\% difference is
+21,999, against 21,913 from the exact pyramid geometry, and the 0.4\% difference is
 the 0.25~m marching step. Drawing 5,000 Poisson samples at means 10, 100, 1,000
 and 10,000 gives standard deviations 3.2, 9.9, 31.7 and 100.9, compared with
 $\sqrt{\mu}=3.16$, 10, 31.6 and 100. The fixed-pixel null distribution has mean
@@ -452,7 +437,7 @@ correct.
 \subsection{Expected counts and the before/after pair}
 
 Figure~\ref{fig:image} shows the 30-day expected-count map and the clean ratio
-map. The raw counts run from 191 to 1,197 per pixel, a factor 6.3, and the
+map. The raw counts run from 191 to 1,197 per pixel, a factor of 6.3, and the
 total is $9.85\times10^5$ muons. The chamber changes the total by only 0.36\%,
 because it affects a small fraction of the image. The raw map is therefore a
 picture of the pyramid, not of the chamber.
@@ -461,8 +446,8 @@ The clean ratio is 1.0000 away from the chamber and peaks at $1.4758$ at
 $(a_x,a_y)=(0^\circ,30^\circ)$. At that pixel the expected counts are 366.8
 with the chamber and 248.5 without, an excess of 118.3 muons in 30 days, or
 $S_{\rm exp}=7.50\sigma$. The chamber is recovered from the muon data alone,
-using the no-void twin as the reference. This ratio map is the ``after'' half
-of the before/after pair; the density slice is the ``before'' half.
+using the no-void twin as the reference. This ratio map is the after half
+of the before/after pair, as the density slice is the before half.
 
 \begin{figure}[t]
     \centering
@@ -477,7 +462,7 @@ of the before/after pair; the density slice is the ``before'' half.
         $a_x=0^\circ$. The chamber is the excess above 1.0.}
         \label{fig:ratio}
     \end{subfigure}
-    \caption{The before/after pair. The left panel is what the detector counts;
+    \caption{The before/after pair. The left panel is what the detector counts, and
     the right panel is the reconstructed radiograph after dividing out the
     known shape of the pyramid.}
     \label{fig:image}
@@ -486,11 +471,11 @@ of the before/after pair; the density slice is the ``before'' half.
 \subsection{Noise, observed significance, and the look-elsewhere effect}
 
 Figure~\ref{fig:noise} in the Appendix shows the same analysis after Poisson
-sampling with seed 0. At one day the image is noise-dominated: the largest
+sampling with seed 0. At one day the image is noise-dominated, as the largest
 observed significance is $4.07\sigma$ somewhere by chance, while the fixed
 signal pixel is only $1.29\sigma$. At 30 days the chamber is a visible cluster, and the fixed pixel
 has observed significance $7.70\sigma$, close to the expected $7.50\sigma$.
-The maximum pixel also happens to be $7.70\sigma$ because the signal is real;
+The maximum pixel also happens to be $7.70\sigma$ because the signal is real, as
 at one day the maximum and the fixed pixel are unrelated.
 
 The null control is more informative. In 500 independent 30-day simulations of
@@ -509,8 +494,8 @@ are shown in Appendix Figure~\ref{fig:null}.
 The expected significance at the fixed pixel is $1.3696$ after one day. Because
 $S_{\rm exp}\propto\sqrt{T}$, the curve in Figure~\ref{fig:exposure} follows
 $S(T)=1.3696\sqrt{T/\mathrm{day}}$. It crosses $3\sigma$ at $4.82$ days and
-$5\sigma$ at $13.37$ days by linear interpolation; the exact square-root
-solution is $13.33$ days. We therefore quote
+$5\sigma$ at $13.37$ days by linear interpolation. Meanwhile, the exact square-root
+solution is $13.33$ days. We therefore quote that
 
 \begin{quote}
 \textbf{For the baseline 0.25~m$^2$ detector and a 10~m radius chamber, the
@@ -518,11 +503,11 @@ expected chamber signal reaches $5\sigma$ after approximately 13.4 days under
 the project's simplified model.}
 \end{quote}
 
-There is no statistical uncertainty on this number: it is a deterministic
+There is no statistical uncertainty on this number as it is a deterministic
 property of the model. The red points in Figure~\ref{fig:exposure} show what a
 sequence of measurements would look like. At 7 days the mean observed
-significance is $3.75\pm1.19$, and 15\% of experiments cross $5\sigma$; at
-14 days the mean is $5.12\pm1.24$, and 54\% cross; at 30 days the mean is
+significance is $3.75\pm1.19$, and 15\% of experiments cross $5\sigma$, at
+14 days the mean is $5.12\pm1.24$, and 54\% cross, and at 30 days the mean is
 $7.53\pm1.23$, and 98\% cross. The expected curve is the average of these
 distributions, not a prediction of any one of them. The individual distributions
 are shown in Appendix Figure~\ref{fig:dist}.
@@ -531,7 +516,7 @@ are shown in Appendix Figure~\ref{fig:dist}.
     \centering
     \includegraphics[width=0.64\textwidth]{11_exposure_curve.png}
     \caption{Expected significance versus exposure, with $3\sigma$ and
-    $5\sigma$ reference lines. The smooth curve is deterministic; the red
+    $5\sigma$ reference lines. The smooth curve is deterministic, and the red
     points are the mean and standard deviation of 200 Poisson experiments at
     selected exposures. The $5\sigma$ crossing is 13.4 days.}
     \label{fig:exposure}
@@ -539,21 +524,21 @@ are shown in Appendix Figure~\ref{fig:dist}.
 
 \subsection{Parameter studies}
 
-All four named studies were completed; Table~\ref{tab:studies} summarises them
+All four named studies were completed. Table~\ref{tab:studies} summarises them
 and Figure~\ref{fig:studies} shows the results.
 
 \emph{Study A: chamber size.} Varying the radius from 4 to 20~m at fixed depth
 and 30 days gives significance from $2.26\sigma$ to $19.43\sigma$ and exposure
 from 146.6 to 1.99 days. A log--log fit gives $S\propto r^{1.32}$ and
-$T_5\propto r^{-2.65}$. The exponent is close to one, not three: the radiograph
+$T_5\propto r^{-2.65}$. The exponent is close to one as the radiograph
 measures the missing chord through the chamber, which grows as $r$, not the
 missing volume, which grows as $r^3$.
 
-\emph{Study B: chamber depth.} The accessible range is 55--110~m; below about
+\emph{Study B: chamber depth.} The accessible range is 55-110~m, as below about
 52~m the line of sight is outside the $\pm40^\circ$ field. The exposure is
 15.4 days at 55~m, rises to 21.6 days at 95~m, and falls to 17.8 days at
-110~m. The shallow end has less rock but a larger zenith angle; the deep end
-has more rock but a more vertical flux. Above 95~m the chamber approaches the
+110~m. The shallow end has less rock but a larger zenith angle, whereas the deep end
+has more rock but a more vertical flux. Above 95~m, the chamber approaches the
 apex, the ray exits the pyramid soon after the chamber, and the overburden
 stops growing.
 
@@ -565,27 +550,27 @@ sight exiting through different faces of the pyramid.
 
 \emph{Study D: angular binning.} The peak-pixel significance rises from
 $3.75\sigma$ at $1^\circ$ to $7.50\sigma$ at $2^\circ$, $12.79\sigma$ at
-$4^\circ$ and $18.75\sigma$ at $5^\circ$. This is arithmetic, not physics: the
+$4^\circ$ and $18.75\sigma$ at $5^\circ$. This is arithmetic, not physics, as the
 counts per pixel scale with $\Omega\propto(\Delta\theta)^2$, so
 $S_{\rm peak}\propto\Omega/\sqrt{\Omega}\propto\Delta\theta$. The whole-image
-significance is almost constant at 3.39--3.61$\sigma$. The coarse-bin ``gain''
+significance is almost constant at 3.39--3.61$\sigma$. The coarse-bin gain
 is a change in the statistic, not a real gain in detectability. A real detector
 would also blur neighbouring directions, which this model does not include.
 
 \begin{table}[t]
 \centering
 \caption{Summary of the four named parameter studies. Each study changes one
-parameter; all others remain at the baseline.}
+parameter, and all others remain at the baseline.}
 \label{tab:studies}
 \small
 \begin{tabular}{@{}p{2.5cm}p{4.0cm}p{5.6cm}@{}}
 \toprule
 Study & Range & Result \\
 \midrule
-A: radius & 4--20~m & $T_5$ 146.6 $\to$ 1.99 days; $S\propto r^{1.32}$ \\
+A: radius & 4--20~m & $T_5$ 146.6 $\to$ 1.99 days. $S\propto r^{1.32}$ \\
 B: depth & 55--110~m & $T_5$ 15.4 $\to$ 21.6 $\to$ 17.8 days \\
 C: placement & $y=-55$ to $-15$~m & optimum $y\approx-25$~m, 15.9 days \\
-D: bin size & $1^\circ$--$5^\circ$ & peak $S$ 3.75 $\to$ 18.75; image $\approx3.5$ \\
+D: bin size & $1^\circ$--$5^\circ$ & peak $S$ 3.75 $\to$ 18.75. image $\approx3.5$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -625,19 +610,19 @@ exact tangent-plane pixel solid angle instead of the project's small-angle
 convention increases the 5$\sigma$ exposure from 13.3 to 15.4 days. The
 whole-image statistic, which integrates the excess over all 1681 pixels and
 divides by the square root of the total background, gives $3.55\sigma$ at
-30 days and a 5$\sigma$ exposure of 59.5 days. Neither is a contradiction: the
+30 days and a 5$\sigma$ exposure of 59.5 days. Neither is a contradiction, as the
 per-pixel statistic asks whether one pre-selected direction is bright, while
 the whole-image statistic asks whether the total excess is significant.
 
-Detector area scales exactly as expected: $T_5\propto A^{-1.00}$, from
+Detector area scales exactly as expected, which is $T_5\propto A^{-1.00}$, from
 53.3 days at 0.0625~m$^2$ to 1.67 days at 2~m$^2$ (Appendix
-Figure~\ref{fig:area}; the observed fluctuation is in
+Figure~\ref{fig:area}. The observed fluctuation is in
 Figure~\ref{fig:dist}). The hypothetical Malaysian limestone hill, with an 8~m
 cave seen through about 80~m of rock, reaches $5\sigma$ in 9.1 days (Appendix
 Figure~\ref{fig:malaysian}). The most important systematic is the assumed rock
-density (Appendix Figure~\ref{fig:densitysys}): analysing a solid target with
+density (Appendix Figure~\ref{fig:densitysys}), as analysing a solid target with
 2.6 instead of 2.5~g\,cm$^{-3}$ produces a fake maximum of $3.86\sigma$ at
-30 days and $9.46\sigma$ at 180 days; at the chamber pixel the fake signal is
+30 days and $9.46\sigma$ at 180 days, and at the chamber pixel the fake signal is
 $1.11\sigma$ and $2.72\sigma$. With 2.7~g\,cm$^{-3}$ the 180-day maximum is
 $14.76\sigma$ and the chamber pixel is $5.36\sigma$. A void and slightly
 lighter rock are degenerate in a line-integrated measurement. All estimates are
@@ -668,20 +653,19 @@ Detector area 0.0625~m$^2$ & scaling & 53.3 \\
 \section{Discussion}
 \label{sec:discussion}
 
-The headline is a deterministic benchmark: with the baseline parameters, the
+The headline is a deterministic benchmark, as with the baseline parameters, the
 expected signal at one pre-selected direction crosses $5\sigma$ at 13.4 days.
-It is not a measurement and it is not a prediction for Khufu. Its value is that
-every ingredient is visible: the geometry, the spectrum, the energy-loss model,
-the Poisson sampling, and the choice of statistic. The result is therefore
+It is not a measurement or a prediction for Khufu. Its value is that the geometry, the spectrum, the energy-loss model,
+the Poisson sampling, and the choice of statistic are visible. The result is therefore
 reproducible and can be used to teach why exposure, angular resolution, and
 systematics matter.
 
 The result is model-dependent in four important ways. First, detector
-acceptance and efficiency are absent; the simulation counts every muon in every
+acceptance and efficiency are absent, as the simulation counts every muon in every
 pixel. A 50\% efficient detector doubles the exposure. Second, backgrounds are
-absent: electrons from local radioactivity and muons scattered in from outside
+absent, thus electrons from local radioactivity and muons scattered in from outside
 the target would add counts that are not modelled. Third, the atmospheric muon
-flux varies with pressure and temperature; a real campaign must monitor and
+flux varies with pressure and temperature, thus a real campaign must monitor and
 correct it. Fourth, and most important, the rock density is assumed known. A
 4\% error already produces a fake $3.86\sigma$ maximum at 30 days and a fake
 $9.46\sigma$ maximum at 180 days. Muography measures density along a line, so a
@@ -728,9 +712,9 @@ We built a reproducible end-to-end simulation of muon radiography for a
 230~m limestone pyramid with a 10~m radius hidden chamber, including ray
 tracing, expected counts, Poisson noise, significance, null controls, and four
 parameter studies. Under the baseline model the expected chamber signal reaches
-$3\sigma$ after 4.8 days and $5\sigma$ after 13.4 days; the 30-day expected
+$3\sigma$ after 4.8 days and $5\sigma$ after 13.4 days, and the 30-day expected
 significance is $7.50\sigma$. The answer is controlled by geometry and
-statistics rather than by the muon flux alone: the signal follows the missing
+statistics rather than by the muon flux alone, as the signal follows the missing
 chord, the look-elsewhere effect makes a single $3\sigma$ pixel unsurprising,
 and a 4\% density error can fake a $5\sigma$ signal at long exposure. The main
 limitations are the absence of detector response, scattering, backgrounds,
@@ -739,7 +723,7 @@ a detector-response model, a density Monte Carlo, and a tomographic inversion
 with multiple detector positions.
 
 \begin{ack}
-We thank Assoc.\ Prof.\ Dr.\ Khaw Kim Siang and the Muon Physics Group at the
+We thank Assoc.\ Prof.\ Dr.\ Khaw Kim Siang from the
 Tsung-Dao Lee Institute, Shanghai Jiao Tong University, for the project
 framework, the supplied physics toolkit, and continuous guidance. We thank the
 Malaysia Science Scholars' Programme for the opportunity and support.
@@ -757,14 +741,14 @@ Malaysia Science Scholars' Programme for the opportunity and support.
 \label{app:data}
 
 \begin{sloppypar}
-This project uses synthetic data generated by the simulation; no external
+This project uses synthetic data generated by the simulation, and no external
 observational dataset was used. The primary inputs are the baseline parameters
 in \texttt{code/project\_config.py}, the supplied physics in
 \texttt{code/muography.py}, and the target definition in the notebooks. The
-software environment is Python 3.11 with NumPy 2.4 \cite{harris2020numpy},
-Matplotlib 3.11 \cite{hunter2007matplotlib}, and Jupyter
+software environment is Python 3.11.17 with NumPy 2.4.6 \cite{harris2020numpy},
+Matplotlib 3.11.2 \cite{hunter2007matplotlib}, and Jupyter 1.1.1
 \cite{kluyver2016jupyter}. The reference seed is 0. All generated data are
-reproducible by running notebooks 02--05 in order; the summary of every number
+reproducible by running notebooks 02--05 in order, and the summary of every number
 used in this paper is in \texttt{figures/results\_summary.json}.
 \end{sloppypar}
 
@@ -783,7 +767,7 @@ used in this paper is in \texttt{figures/results\_summary.json}.
     \begin{subfigure}{0.48\textwidth}
         \includegraphics[width=\linewidth]{04_surviving_flux.png}
         \caption{Transmitted flux above the minimum energy through increasing
-        limestone thickness; the vertical scale is logarithmic.}
+        limestone thickness. The vertical scale is logarithmic.}
         \label{fig:survival}
     \end{subfigure}
     \caption{The two physics ingredients used by the simulation. Both panels
@@ -815,7 +799,7 @@ used in this paper is in \texttt{figures/results\_summary.json}.
         \label{fig:notch}
     \end{subfigure}
     \caption{The target and its first ray-traced signature. The chamber lowers
-    the opacity by about $4{,}900$~g\,cm$^{-2}$; the no-void control is flat.}
+    the opacity by about $4{,}900$~g\,cm$^{-2}$. The no-void control is flat.}
     \label{fig:target}
 \end{figure}
 
@@ -849,7 +833,7 @@ used in this paper is in \texttt{figures/results\_summary.json}.
     \end{subfigure}\hfill
     \begin{subfigure}{0.40\textwidth}
         \includegraphics[width=\linewidth]{19_malaysian_exposure.png}
-        \caption{Exposure curve for the same hill; $5\sigma$ at 9.1 days.}
+        \caption{Exposure curve for the same hill, $5\sigma$ at 9.1 days.}
         \label{fig:malaysianexp}
     \end{subfigure}
     \caption{The hypothetical Malaysian limestone-hill extension. This is a
@@ -912,10 +896,10 @@ is 52.59~GeV, 5.2\% above the linear 50~GeV.
 \label{app:code}
 
 \begin{sloppypar}
-The repository is \texttt{evan-student-package/}. The figure-to-notebook mapping
+The repository is \texttt{muography-project/}. The figure-to-notebook mapping
 is given in Table~\ref{tab:code}. The shared analysis functions are in
-\texttt{code/student\_analysis.py}; the baseline parameters are in
-\texttt{code/project\_config.py}; the summary of all numbers is
+\texttt{code/student\_analysis.py}, the baseline parameters are in
+\texttt{code/project\_config.py}, and the summary of all numbers is
 \texttt{figures/results\_summary.json}. Notebooks 03--05 import the shared
 module and run from a fresh kernel.
 \end{sloppypar}
