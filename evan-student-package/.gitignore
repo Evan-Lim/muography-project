@@ -4,3 +4,9 @@ __pycache__/
 *.aux
 *.log
 *.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.bbl
+*.blg

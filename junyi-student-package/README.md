@@ -30,6 +30,8 @@ fluctuate around it.
 
 ---
 
+Junyi's completed notebook sequence follows the MYSSP starter layout. The reference calculations and the added studies draw on [Evan Lim's notebook work](https://github.com/Evan-Lim/muography-project/tree/eeda0815380be889aed48717c45911c7aa523ece/evan-student-package/notebooks).
+
 ## Getting started
 
 ```bash
