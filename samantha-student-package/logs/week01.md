@@ -19,7 +19,7 @@ I forgot to convert degrees to radian for the angle in the surviving flux agains
 **Next week I plan to**
 
 Plot the surviving flux against limestone thickness from 1 m to 400 m.
-Check through the graphs
+Check through the graphs from week 1 again.
 
 
 

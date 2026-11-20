@@ -13,8 +13,10 @@ I finished the vertical slice of the pyramid colourbar and the graph of the cham
 **What I found**
 
 ![week03: vertical cross-section of pyramid](image-1.png)
+I plotted the vertical cross-section of the pyramid showing where the chamber lies.
 
 ![week03: chamber notch](image-2.png)
+Where the void is present the opacity decreases due to decreasing amount of limestone. 
 
 **What went wrong / what I don't understand**
 

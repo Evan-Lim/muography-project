@@ -17,8 +17,8 @@ As the position of the detector moved up,
 ![Study C: Effects of the position of the detector on expected significance](image-8.png)
 
 **What went wrong / what I don't understand**
-I found an odd decrement in the graph at 80m. I believe it is due to the detectors view.
-I'm doubtful that if the position of the dectector increases, that the expected significance should drop. 
+I found an odd decrement in the graph at 80m. I believe it is due to chamber excessing the size of the pyramid.
+
 
 **Next week I plan to**
 Look into the mistakes on the graphs.

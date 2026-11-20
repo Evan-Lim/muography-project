@@ -15,8 +15,9 @@ Write the overleaf.
 **What I found**
 After discussion, we found that the oddity in the graph for study B, could be reduced by decreasing the angular step from 2 degrees to 1 degree.
 
-**What went wrong / what I don't understand**
 
+**What went wrong / what I don't understand**
+-
 
 **Next week I plan to**
 Submit the presentation and overleaf.

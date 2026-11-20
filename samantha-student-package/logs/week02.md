@@ -15,7 +15,7 @@ stuck weeks are where supervision actually helps.
 **What I did**
 
 I plotted the surviving flux against limestone thickness from 1 m to 400 m.
-After consulting Mr Kim during the meeting, I tried to integrate the flux for the surviving flux against limestone thickness graph. 
+After consulting Mr Kim during the meeting, I tried to redo the flux for the surviving flux against limestone thickness graph. 
 I also looked in further onto why the zenith flux at 0 degrees has higher energy than larger angles at high flux but lower energies than larger angles at low flux.
 
 **What I found**
@@ -29,14 +29,9 @@ In the lower, denser regions of the atmosphere, high-energy mesons often collide
 
 I didn't know if there should have been one curve of multiple curves for the graph of limestone thickness againt suviving flux
 
-*(The most important section. Be specific: which cell, which number, what you
-expected versus what you got. "It doesn't work" cannot be helped; "the opacity
-comes out negative when ay is above 30 degrees" can be helped in two minutes.)*
-
 **Next week I plan to**
  
 Read through the papers provided.
 Plot the opacity for the target.
-
 
 **Hours spent: 2** ___
