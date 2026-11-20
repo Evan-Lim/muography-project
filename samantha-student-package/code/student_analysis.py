@@ -23,7 +23,7 @@ def opacity_map(target, detector, field_deg=FIELD_DEG, step_deg=STEP_DEG,
     """
 
 
-    half_field = field_deg / 2.0
+    half_field = field_deg
     ax_range = np.arange(-half_field, half_field + step_deg, step_deg)
     ay_range = np.arange(-half_field, half_field + step_deg, step_deg)
 
