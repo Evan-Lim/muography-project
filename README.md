@@ -104,8 +104,8 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- INSTALLATION -->
+## Installation
 
 ```bash
 pip install -r requirements.txt
