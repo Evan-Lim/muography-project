@@ -123,7 +123,7 @@ high-energy tail is the part that matters, because only the most energetic
 muons can cross a hundred metres of rock.
 
 
-## Why muons can see through rock
+### 2. Why muons can see through rock
 
 As a charged particle moves through matter, it loses energy by knocking
 electrons out of atoms. The loss rate is about **2 MeV for every gram per square
@@ -163,7 +163,7 @@ formula reduces to the simple rule $E_{\min} \approx aX$. At 100 m of limestone
 the simple 50 GeV estimate. That 5 per cent is the radiative term, not a bug.
 
 
-## The experiment we simulated
+### 3. The experiment we simulated
 
 Nobody in this project touches a real detector. Everything happens in Python.
 The simulation has five steps, and each one is a separate notebook.
@@ -183,9 +183,11 @@ not the result of one noisy measurement. A real measurement will fluctuate
 around that average, just as 100 coin tosses do not always give exactly 50
 heads.
 
+
+
 <!-- PROCESS -->
 
-## Step 1: build a fake pyramid with a secret
+### Step 1: build a fake pyramid with a secret
 
 The first job is to describe the target as a function of position: give the
 computer any point $(x, y, z)$ and it returns the density at that point. Outside
@@ -204,9 +206,8 @@ chamber visible because we put it there.
 
 ![Density slice through the pyramid, showing the chamber](figures/05_density_slice.png)
 
----
 
-## Step 2: shoot rays and measure “how much rock”
+### Step 2: shoot rays and measure “how much rock”
 
 For every one of the 1,681 viewing directions, the computer walks a ray from
 the detector through the target in 0.25 m steps. At each step it asks the target
@@ -233,9 +234,8 @@ The measured value is 4,935 g/cm², about 1.3 per cent lower because the discret
 ray does not pass exactly through the centre. That agreement is the first
 validation of the geometry.
 
----
 
-## Step 3: turn rock into muon counts
+### Step 3: turn rock into muon counts
 
 From the opacity of each direction we calculate the minimum energy a muon needs
 to survive, and then count how many muons in the cosmic-ray spectrum have at
@@ -259,9 +259,8 @@ six times as many muons as the thinnest. The chamber changes one pixel by about
 48 per cent. A 48 per cent effect hidden under a factor-six gradient is
 invisible to the eye, which is exactly why the next step is necessary.
 
----
 
-## Step 4: make a picture — the before-and-after pair
+### Step 4: make a picture — the before-and-after pair
 
 The trick is to build a **twin target** with the chamber filled back in with
 solid rock, run the same calculation, and divide the two maps pixel by pixel:
@@ -285,9 +284,8 @@ a 3D density model is a harder, separate problem.
 ![The clean ratio map: the chamber recovered from muon counts](figures/09_clean_ratio.png)
 
 
----
 
-## Step 5: add noise and ask “is it real?”
+### Step 5: add noise and ask “is it real?”
 
 Nature does not deliver exactly the expected number of muons. It delivers a
 random number drawn from a **Poisson distribution** whose average is the
@@ -333,6 +331,8 @@ $T$, the expected significance grows as $\sqrt{T}$. Doubling the exposure
 multiplies the significance by only 1.41; reaching 5σ from 3σ requires
 $(5/3)^2 \approx 2.8$ times more time.
 
+
+
 <!-- HEADLINE ANSWER-->
 
 ## The headline answer
@@ -364,9 +364,8 @@ more conservative global statement. Both are reported.
 
 ![Expected significance versus exposure time](figures/11_exposure_curve.png)
 
----
 
-## What changes the answer? The four studies.
+### What changes the answer? The four studies.
 
 The project requires two parameter studies; this project does all four, plus
 several extras.
@@ -402,8 +401,7 @@ whole-image significance stays almost constant at about 3.5σ. The coarse-bin
 would also blur neighbouring directions, which this model does not include.
 
 
-<!-- EXTRA -->
-
+<!-- BEYOND THE BRIEF: THE EXTRA STUDIES-->
 ## Beyond the brief: the extra studies
 
 **The Malaysian limestone hill.** The same pipeline was applied to a
@@ -467,7 +465,7 @@ what is missing is part of understanding the result.
 
 <!-- MYSSP 2026 -->
 
-## 13. How this maps to the MYSSP 2026 submission
+## How this maps to the MYSSP 2026 submission
 
 The project has been revised against the official MYSSP 2026 paper, presentation
 and judging documents.
@@ -576,16 +574,7 @@ The key functions are:
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+<!-- CONTRIBUTIONS -->
 
 ### Contributors:
 
