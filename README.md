@@ -41,21 +41,30 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#1-a-particle-that-falls-on-you-for-free">1. A particle that falls on you for free</a></li>
+        <li><a href="#2-why-muons-can-see-through-rock">2. Why muons can see through rock</a></li>
+        <li><a href="#3-the-experiment-we-simulated">3. The experiment we simulated</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#methodology">Methodology</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#step-1-build-a-fake-pyramid-with-a-secret">Step 1: build a fake pyramid with a secret</a></li>
+        <li><a href="#step-2-shoot-rays-and-measure-how-much-rock">Step 2: shoot rays and measure “how much rock"</a></li>
+        <li><a href="#step-3-turn-rock-into-muon-counts">Step 3: turn rock into muon counts</a></li>
+        <li><a href="#step-4-make-a-picture--the-before-and-after-pair">Step 4: make a picture — the before-and-after pair</a></li>
+        <li><a href="#step-5-add-noise-and-ask-is-it-real">Step 5: add noise and ask “is it real?”</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#the-headline-answer">The headline answer</a></li>
+    <li><a href="#beyond-the-brief-the-extra-studies">Beyond the brief: the extra studies</a></li>
+    <li><a href="#what-the-simulation-leaves-out">What the simulation leaves out</a></li>
+    <li><a href="#how-this-maps-to-the-myssp-2026-submission">How this maps to the MYSSP 2026 submission</a></li>
+    <li><a href="#how-to-run-the-project">How to run the project</a></li>
+    <li><a href="#contributors">Contributors</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#glossary">Glossary</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -84,13 +93,11 @@ the chamber signal reaches the 5σ benchmark?**
 > The answer for the baseline
 model is **about 13.4 days**.
 
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
-## 1. A particle that falls on you for free
+### 1. A particle that falls on you for free
 
 A cosmic ray is a high-energy particle, usually a proton, that has been
 accelerated somewhere in the galaxy. When it hits the upper atmosphere, about
@@ -183,9 +190,15 @@ not the result of one noisy measurement. A real measurement will fluctuate
 around that average, just as 100 coin tosses do not always give exactly 50
 heads.
 
+### Built With
 
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Jupyter Notebook / JupyterLab](https://jupyter.org/) 
+* [Python](https://www.python.org/) 
 
-<!-- PROCESS -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- METHODOLOGY -->
 
 ### Step 1: build a fake pyramid with a secret
 
@@ -368,8 +381,11 @@ more conservative global statement. Both are reported.
 
 ### What changes the answer? The four studies.
 
-The project requires two parameter studies; this project does all four, plus
+The project requires at least two parameter studies; this project does all four, plus
 several extras.
+Study A, B, C and D can be found in 'evan-student-package'.
+Study A and D in 'junyi-student-package'.
+Study B and C in 'samantha-student-package'.
 
 **Study A — chamber size.** A chamber of radius 4 m needs about 147 days; a
 20 m chamber needs about 2 days. The significance grows roughly as $r^{1.3}$,
@@ -601,7 +617,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 
 Junyi Chai - 
 
-Evan Lim Hong Yan - 
+Evan Lim Hong Yan - evanlim804@gmail.com
 
 Samantha Chan Teng Wei - chantengwei@gmail.com
 
