@@ -8,7 +8,7 @@
   <p align="center">
     Under a simulation model, how long would a 0.25 m² detector observing the baseline pyramid need before the expected chamber signal reaches 5σ?
     <br />
-    <a href="https://github.com/Evan-Lim/muography-project"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Evan-Lim/muography-project/tree/main/paper"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
