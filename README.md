@@ -55,9 +55,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-
 Every minute, about ten thousand invisible particles called **muons** pass
 through every square metre of the ground, including the ground under you. They
 are produced when cosmic rays hit the top of the atmosphere, they travel at
