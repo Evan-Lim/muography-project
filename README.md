@@ -22,10 +22,10 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Simulation Study of Exposure Time and Systematics for Cosmic-ray Muography for Hidden Chambers</h3>
 
   <p align="center">
-    project_description
+    Under a simulation model, how long would a 0.25 m² detector observing the baseline pyramid need before the expected chamber signal reaches 5σ?
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
@@ -104,7 +104,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 
 
-<!-- INSTALLATION -->
+<!-- Getting Started -->
 ## Installation
 
 ```bash
@@ -149,10 +149,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 
-### Top contributors:
+### Contributors:
 
-<a href="https://github.com/github_username/repo_name/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=github_username/repo_name" alt="contrib.rocks image" />
+<a href="https://github.com/Evan-Lim/muography-project">
+  <img src="https://contrib.rocks/image?repo=Evan-Lim/muography-project" alt="contrib.rocks image" />
 </a>
 
 
