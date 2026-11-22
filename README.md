@@ -511,7 +511,7 @@ repository document collaboration and commitment.
 <!-- Getting Started -->
 ## How to run the project
 
-The code lives in `evan-student-package/`, 'samantha-student-package/` and 'junyi-student-package`.
+The code lives in `evan-student-package/`, `samantha-student-package/` and `junyi-student-package`.
 
 ```bash
 cd evan-student-package
@@ -575,7 +575,7 @@ The key functions are:
 
 ### Contributors:
 
-<a href="https://github.com/Evan-Lim/muography-project">
+<a href="https://github.com/Evan-Lim/muography-project/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Evan-Lim/muography-project" alt="contrib.rocks image" />
 </a>
 
