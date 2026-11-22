@@ -8,7 +8,7 @@
   <p align="center">
     Under a simulation model, how long would a 0.25 m² detector observing the baseline pyramid need before the expected chamber signal reaches 5σ?
     <br />
-    <a href="https://github.com/Evan-Lim/muography-project"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Evan-Lim/muography-project/tree/main/paper"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
@@ -191,11 +191,11 @@ the point, because the interesting part of the eventual image is the difference
 between “what we expected” and “what we saw.”
 
 A vertical slice through the pyramid is shown in
-`figures/05_density_slice.png`. It looks like a triangle with a small circular
+`evan-student-package/figures/05_density_slice.png`. It looks like a triangle with a small circular
 hole. That picture is the “before” image: the truth, drawn by us, with the
 chamber visible because we put it there.
 
-![Density slice through the pyramid, showing the chamber](figures/05_density_slice.png)
+![Density slice through the pyramid, showing the chamber](evan-student-package/figures/05_density_slice.png)
 
 
 ### Step 2: shoot rays and measure “how much rock”
@@ -212,7 +212,7 @@ large where the pyramid is thick, smaller where the line passes through the
 chamber, and small where the ray leaves the target quickly.
 
 The map of opacity versus direction is the first real image. It already shows
-the chamber as a notch: `figures/06_opacity_notch.png` shows the opacity falling
+the chamber as a notch: `evan-student-package/figures/06_opacity_notch.png` shows the opacity falling
 by about 5,000 g/cm² as the line of sight sweeps across the chamber. That number
 is easy to understand: the ray is missing a chord through a sphere, and the
 longest chord is the diameter, 20 m. The missing opacity is therefore
@@ -244,7 +244,7 @@ anywhere from about 6 to 40 muons per day, depending on direction. The whole
 until you remember it is spread over 1,681 pixels, and each pixel only gets a
 few dozen.
 
-The expected-count map for 30 days (`figures/08_expected_counts.png`) is a
+The expected-count map for 30 days (`evan-student-package/figures/08_expected_counts.png`) is a
 picture of the **pyramid**, not the chamber. The thickest direction has about
 six times as many muons as the thinnest. The chamber changes one pixel by about
 48 per cent. A 48 per cent effect hidden under a factor-six gradient is
@@ -264,7 +264,7 @@ $$
 Away from the chamber the ratio is 1.000: the pyramid's shape cancels out of the
 numerator and denominator. At the chamber it rises to about **1.48**, because
 the missing rock lets roughly half as many extra muons through. The ratio map
-(`figures/09_clean_ratio.png`) is the “after” image. It is the first picture in
+(`evan-student-package/figures/09_clean_ratio.png`) is the “after” image. It is the first picture in
 which the chamber is actually visible from the muon data alone.
 
 This is a **muon radiograph**, not a full three-dimensional CT scan. One viewing
@@ -272,7 +272,7 @@ direction becomes one pixel, exactly as in the original 1970 Alvarez pyramid
 experiment and the 2017 ScanPyramids images. Turning many overlapping views into
 a 3D density model is a harder, separate problem.
 
-![The clean ratio map: the chamber recovered from muon counts](figures/09_clean_ratio.png)
+![The clean ratio map: the chamber recovered from muon counts](evan-student-package/figures/09_clean_ratio.png)
 
 
 
@@ -353,7 +353,7 @@ only about 3.55σ, and the 5σ exposure is about **59 days**. The per-pixel
 definition is the project's official benchmark; the whole-image number is the
 more conservative global statement. Both are reported.
 
-![Expected significance versus exposure time](figures/11_exposure_curve.png)
+![Expected significance versus exposure time](evan-student-package/figures/11_exposure_curve.png)
 
 
 
@@ -546,7 +546,7 @@ therefore run from a fresh kernel without running an earlier notebook first.
 
 The fixed reference seed is **0** (`code/project_config.py`). Every noisy figure
 uses it, and the notebook prints the seed. The summary of all the numbers is in
-`figures/results_summary.json`.
+`evan-student-package/figures/results_summary.json`.
 
 The key functions are:
 
