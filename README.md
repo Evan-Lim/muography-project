@@ -593,7 +593,7 @@ Distributed under the project_license. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Junyi Chai - 
+Junyi Chai - junyi.chai0725@gmail.com
 
 Evan Lim Hong Yan - evanlim804@gmail.com
 
